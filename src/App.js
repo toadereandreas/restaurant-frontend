@@ -15,6 +15,7 @@ import Lunch from "./Components/lunch";
 import Dinner from "./Components/dinner";
 import Coffee from "./Components/coffee";
 import Dessert from "./Components/dessert";
+import Location from "./Components/location";
 
 const client = new ApolloClient({
   uri: "https://www.playgroundev.com/graphql/",
@@ -52,6 +53,7 @@ export default class App extends Component {
                 <Route exact path={"/drinks"} component={Drinks}/>
                 <Route exact path={"/desserts"} component={Dessert}/>
                 <Route exact path={"/coffee"} component={Coffee}/>
+                <Route exact path={"/location"} component={Location}/>
               </Switch>
             </div>
           </Router>

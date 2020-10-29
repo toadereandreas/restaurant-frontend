@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import Background from '../Images/indian.png';
 import Header from "./header";
 
-var sectionStyle = {
+const sectionStyle = {
     width: "100%",
     height: "1080px",
     backgroundImage: `url(${Background})`
@@ -30,7 +30,7 @@ class Menu extends Component {
                 </div>
                 <div style={{alignContent: 'centre', paddingLeft: '10%',  height: "25%"}}>
                     <Link to={"/breakfast"}>
-                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderLeftStyle: 'none', borderTopStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
+                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderLeftStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
                             <text style={{ fontWeight: '600', fontSize: '45px'}}>BREAKFAST</text>
                         </Button>
                     </Link>
@@ -40,7 +40,7 @@ class Menu extends Component {
                         </Button>
                     </Link>
                     <Link to={"/dinner"}>
-                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderTopStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
+                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderTopStyle: 'none', borderRadius: '0px'}}>
                             <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: 'Trattatello'}}>DINNER</text>
                         </Button>
                     </Link>

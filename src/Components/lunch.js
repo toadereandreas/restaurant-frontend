@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import Background from '../Images/lunch.jpg';
 import Header from "./header";
 
-var sectionStyle = {
+const sectionStyle = {
     width: "100%",
     height: "1080px",
     backgroundImage: `url(${Background})`

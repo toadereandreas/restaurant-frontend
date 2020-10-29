@@ -4,14 +4,14 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import {Button} from "react-bootstrap";
 
-var upperButtonTextStyle = {
-    fontWeight: '600',
-    fontSize: '20px'
-}
+const upperButtonTextStyle = {
+    fontWeight: '700',
+    fontSize: '25px'
+};
 
-var upperButtonStyle = {
+const upperButtonStyle = {
     width: '200px'
-}
+};
 
 class Header extends Component {
     render() {
