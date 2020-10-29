@@ -17,31 +17,43 @@ class Menu extends Component {
             <section style={ sectionStyle }>
                 <Header/>
                 <div style={{alignContent: 'centre', paddingLeft: '25%', paddingTop: '5%', height: "25%"}}>
-                    <Link to={"/breakfast"}>
+                    <Link to={"/wines"}>
                         <Button variant="outline-light" style={{width: "30%", height: '100%', borderLeftStyle: 'none', borderTopStyle: 'none', borderRadius: '0px'}}>
-                            <text style={{ fontWeight: '600', fontSize: '45px'}}>WINES</text>
+                            <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: 'Brush Script MT'}}>WINES</text>
                         </Button>
                     </Link>
-                    <Link to={"/breakfast"}>
+                    <Link to={"/drinks"}>
                         <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderTopStyle: 'none', borderRadius: '0px'}}>
-                            <text style={{ fontWeight: '600', fontSize: '45px'}}>DRINKS</text>
+                            <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: 'Brush Script MT'}}>DRINKS</text>
                         </Button>
                     </Link>
                 </div>
-                <div style={{alignContent: 'centre', paddingLeft: '10%', paddingTop: '5%', height: "25%"}}>
+                <div style={{alignContent: 'centre', paddingLeft: '10%',  height: "25%"}}>
                     <Link to={"/breakfast"}>
-                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderLeftStyle: 'none', borderTopStyle: 'none', borderRadius: '0px'}}>
+                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderLeftStyle: 'none', borderTopStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
                             <text style={{ fontWeight: '600', fontSize: '45px'}}>BREAKFAST</text>
                         </Button>
                     </Link>
-                    <Link to={"/breakfast"}>
-                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderTopStyle: 'none', borderRadius: '0px'}}>
-                            <text style={{ fontWeight: '600', fontSize: '45px'}}>LUNCH</text>
+                    <Link to={"/lunch"}>
+                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderTopStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
+                            <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: 'Luminari'}}>LUNCH</text>
                         </Button>
                     </Link>
-                    <Link to={"/breakfast"}>
-                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderTopStyle: 'none', borderRadius: '0px'}}>
-                            <text style={{ fontWeight: '600', fontSize: '45px'}}>DINNER</text>
+                    <Link to={"/dinner"}>
+                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderTopStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
+                            <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: 'Trattatello'}}>DINNER</text>
+                        </Button>
+                    </Link>
+                </div>
+                <div style={{alignContent: 'centre', paddingLeft: '25%', height: "25%"}}>
+                    <Link to={"/coffee"}>
+                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderLeftStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
+                            <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: "Apple Chancery"}}>COFFEE</text>
+                        </Button>
+                    </Link>
+                    <Link to={"/dessert"}>
+                        <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
+                            <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: "Brush Script MT"}}>DESSERT</text>
                         </Button>
                     </Link>
                 </div>
