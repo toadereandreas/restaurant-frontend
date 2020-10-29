@@ -51,7 +51,7 @@ class Menu extends Component {
                             <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: "Apple Chancery"}}>COFFEE</text>
                         </Button>
                     </Link>
-                    <Link to={"/dessert"}>
+                    <Link to={"/desserts"}>
                         <Button variant="outline-light" style={{width: "30%", height: '100%', borderRightStyle: 'none', borderBottomStyle: 'none', borderRadius: '0px'}}>
                             <text style={{ fontWeight: '600', fontSize: '45px', fontFamily: "Brush Script MT"}}>DESSERT</text>
                         </Button>

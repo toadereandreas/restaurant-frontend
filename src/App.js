@@ -8,6 +8,13 @@ import { Helmet } from "react-helmet";
 import Menu from "./Components/menu";
 import Home from "./Components/home";
 import Reservations from "./Components/reservations";
+import Wines from "./Components/wines";
+import Drinks from "./Components/drinks";
+import Breakfast from "./Components/breakfast";
+import Lunch from "./Components/lunch";
+import Dinner from "./Components/dinner";
+import Coffee from "./Components/coffee";
+import Dessert from "./Components/dessert";
 
 const client = new ApolloClient({
   uri: "https://www.playgroundev.com/graphql/",
@@ -38,6 +45,13 @@ export default class App extends Component {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path={"/reservations"} component={Reservations}/>
+                <Route exact path={"/dinner"} component={Dinner}/>
+                <Route exact path={"/lunch"} component={Lunch}/>
+                <Route exact path={"/breakfast"} component={Breakfast}/>
+                <Route exact path={"/wines"} component={Wines}/>
+                <Route exact path={"/drinks"} component={Drinks}/>
+                <Route exact path={"/desserts"} component={Dessert}/>
+                <Route exact path={"/coffee"} component={Coffee}/>
               </Switch>
             </div>
           </Router>
