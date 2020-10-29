@@ -16,6 +16,8 @@ import Dinner from "./Components/dinner";
 import Coffee from "./Components/coffee";
 import Dessert from "./Components/dessert";
 import Location from "./Components/location";
+import Reviews from "./Components/reviews";
+import About from "./Components/about";
 
 const client = new ApolloClient({
   uri: "https://www.playgroundev.com/graphql/",
@@ -47,8 +49,8 @@ export default class App extends Component {
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path={"/reservations"} component={Reservations}/>
 
-                /*TODO Marius: implement listing of the items for each of the following categories. Create components
-                TODO for each routing path. They should be similar.*/
+                /*TODO Marius: implement listing of the items for each of the following categories.
+                TODO Create components for each routing path. They should be similar.*/
                 <Route exact path={"/dinner"} component={Dinner}/>
                 <Route exact path={"/lunch"} component={Lunch}/>
                 <Route exact path={"/breakfast"} component={Breakfast}/>
@@ -58,6 +60,8 @@ export default class App extends Component {
                 <Route exact path={"/coffee"} component={Coffee}/>
 
                 <Route exact path={"/location"} component={Location}/>
+                <Route exact path={"/reviews"} component={Reviews}/>
+                <Route exact path={"/about"} component={About}/>
               </Switch>
             </div>
           </Router>
