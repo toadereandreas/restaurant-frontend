@@ -15,8 +15,6 @@ class Header extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto ml-auto">
-                        {/*<Nav.Link href="/login" style={{ fontWeight: 'bold', marginRight: '0.9em' }}>LOGIN</Nav.Link>*/}
-                        {/*<Nav.Link href="/register" style={{ fontWeight: 'bold' }}>REGISTER</Nav.Link>*/}
                         <Nav.Link href="/menu" style={{ fontWeight: 'bold', color: '#000080 ', marginRight: '1em' }}>MENU</Nav.Link>
                         <Nav.Link href="/reservations" style={{ fontWeight: 'bold', color: '#000080 ', marginRight: '1em' }}>RESERVATIONS</Nav.Link>
                         <Nav.Link href="/location" style={{ fontWeight: 'bold', color: '#000080 ', marginRight: '1em' }}>LOCATION</Nav.Link>

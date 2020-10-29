@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Helmet } from "react-helmet";
 import Header from "./Components/header";
-
-import pic from "./Images/food1.jpg";
+import Menu from "./Components/menu";
+import Home from "./Components/home";
 
 const client = new ApolloClient({
   uri: "https://www.playgroundev.com/graphql/",
@@ -27,8 +27,8 @@ export default class App extends Component {
         <ApolloProvider client={client}>
           <Router>
             <div /*className="App h-100"*/>
-              <Header />
-              <img style ={{width: "100%", height: "100%"}} src={pic}/>asdfas
+              {/*<Header />*/}
+                {/*<img style ={{width: "100%", height: "100%"}} src={pic}/>asdfas*/}
               <Helmet>
                 <meta charSet="utf-8" />
                 <title>Restaurant</title>
@@ -37,6 +37,8 @@ export default class App extends Component {
                 <meta name="theme-color" content="#008f68" />
               </Helmet>
               <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/menu" component={Menu} />
               </Switch>
             </div>
           </Router>
