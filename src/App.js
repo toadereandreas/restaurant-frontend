@@ -18,6 +18,7 @@ import Dessert from "./Components/dessert";
 import Location from "./Components/location";
 import Reviews from "./Components/reviews";
 import About from "./Components/about";
+import TestGraphQL from "./Components/testgraphql";
 
 const client = new ApolloClient({
   uri: "https://www.playgroundev.com/graphql/",
@@ -62,6 +63,7 @@ export default class App extends Component {
                 <Route exact path={"/location"} component={Location}/>
                 <Route exact path={"/reviews"} component={Reviews}/>
                 <Route exact path={"/about"} component={About}/>
+                <Route exact path={"/testGraphQL"} component={TestGraphQL}/>
               </Switch>
             </div>
           </Router>
