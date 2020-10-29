@@ -46,6 +46,9 @@ export default class App extends Component {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path={"/reservations"} component={Reservations}/>
+
+                /*TODO Marius: implement listing of the items for each of the following categories. Create components
+                TODO for each routing path. They should be similar.*/
                 <Route exact path={"/dinner"} component={Dinner}/>
                 <Route exact path={"/lunch"} component={Lunch}/>
                 <Route exact path={"/breakfast"} component={Breakfast}/>
@@ -53,6 +56,7 @@ export default class App extends Component {
                 <Route exact path={"/drinks"} component={Drinks}/>
                 <Route exact path={"/desserts"} component={Dessert}/>
                 <Route exact path={"/coffee"} component={Coffee}/>
+
                 <Route exact path={"/location"} component={Location}/>
               </Switch>
             </div>
