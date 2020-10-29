@@ -5,7 +5,9 @@ import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Helmet } from "react-helmet";
-import Header from "./header";
+import Header from "./Components/header";
+
+import pic from "./Images/food1.jpg";
 
 const client = new ApolloClient({
   uri: "https://www.playgroundev.com/graphql/",
@@ -24,20 +26,18 @@ export default class App extends Component {
     return (
         <ApolloProvider client={client}>
           <Router>
-            <div className="App h-100">
+            <div /*className="App h-100"*/>
               <Header />
-
+              <img style ={{width: "100%", height: "100%"}} src={pic}/>asdfas
               <Helmet>
                 <meta charSet="utf-8" />
-                <title>GradysBooch</title>
+                <title>Restaurant</title>
                 <link rel="canonical" href="https://www.gradysbooch.com/" />
-                <meta name="description" content="This is a conference management app build by a small team of students from UBB!" />
+                <meta name="description" content="This is a restaurant website!" />
                 <meta name="theme-color" content="#008f68" />
               </Helmet>
-
               <Switch>
               </Switch>
-
             </div>
           </Router>
         </ApolloProvider>
