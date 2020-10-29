@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import Background from '../Images/food0.jpg';
+import Background from '../Images/menu_wallpaper.jpg';
 import Header from "./header";
 
 var sectionStyle = {
@@ -9,7 +9,7 @@ var sectionStyle = {
     backgroundImage: `url(${Background})`
 };
 
-class Home extends Component {
+class Reservations extends Component {
     render() {
         return (
             <section style={ sectionStyle }>
@@ -19,4 +19,4 @@ class Home extends Component {
     }
 }
 
-export default withRouter(Home)
+export default withRouter(Reservations)
