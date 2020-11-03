@@ -26,7 +26,7 @@ class Location extends Component {
                 <div style={{ height: '800px', width: '90%', paddingLeft: '10%' }}>
                     <Header/>
                     <GoogleMapReact
-                        bootstrapURLKeys={{ key:  "AIzaSyA4hbkkk_2XctdgSaZYsguR9ZVffX2d49E" }}
+                        bootstrapURLKeys={{ key: "AIzaSyA4hbkkk_2XctdgSaZYsguR9ZVffX2d49E" }}
                         defaultCenter={this.props.center}
                         defaultZoom={this.props.zoom}
                     >

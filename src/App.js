@@ -1,6 +1,5 @@
 import './App.css';
 import React, { Component } from 'react';
-import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,18 +18,44 @@ import Location from "./Components/location";
 import Reviews from "./Components/reviews";
 import About from "./Components/about";
 import TestGraphQL from "./Components/testgraphql";
+import gql from 'graphql-tag';
+
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: "https://www.playgroundev.com/graphql/",
-  request: (operation) => {
-    const token = localStorage.getItem('AUTH_TOKEN')
-    operation.setContext({
-      headers: {
-        authorization: token ? `JWT ${token}` : '',
-      }
+  uri: 'http://restaurant-env.eba-prznaj7v.eu-west-3.elasticbeanstalk.com/graphql/',
+  cache: new InMemoryCache()
+});
+
+client
+    .query({
+      query: gql`
+            query x{
+              dummies{
+                data{
+                  gid
+                  testName
+                  testAge
+                }
+              }
+            }
+    `
     })
-  }
-})
+    .then(result => console.log(result))
+    .catch(()=>console.log("dasdas"));
+
+// const client = new ApolloClient({
+//   uri: "http://restaurant-env.eba-prznaj7v.eu-west-3.elasticbeanstalk.com/graphql/",
+//   request: (operation) => {
+//     const token = localStorage.getItem('AUTH_TOKEN')
+//     operation.setContext({
+//       headers: {
+//         authorization: token ? `JWT ${token}` : '',
+//       }
+//     })
+//   }
+// })
+
 
 export default class App extends Component {
   render() {
