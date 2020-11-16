@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import React from 'react';
 import Background from '../Images/lunch.jpg';
 import Header from "./header";
+import { gql } from "@apollo/client";
+import { useQuery } from "@apollo/react-hooks"
+import { CardDeck } from 'react-bootstrap';
+import MenuItem from "./MenuItem";
 
 const sectionStyle = {
     width: "100%",
@@ -9,14 +12,37 @@ const sectionStyle = {
     backgroundImage: `url(${Background})`
 };
 
-class Lunch extends Component {
-    render() {
-        return (
-            <section style={sectionStyle}>
-                <Header/>
-            </section>
-        )
-    }
+export default function Lunch() {
+    const { loading, error, data } = useQuery(GET_LUNCH_ITEMS);
+
+    if (loading) return "Loading...";
+    if (error) return `Error! ${error.message}`;
+
+    return (
+        <section style={sectionStyle}>
+            <Header />
+            <CardDeck className="mx-2 my-3">
+            {data.menuItems.data.map(menuItem => (
+                <MenuItem menuItem = {menuItem}></MenuItem>
+            ))}
+            </CardDeck>
+        </section>
+    )
 }
 
-export default withRouter(Lunch)
+const GET_LUNCH_ITEMS = gql`
+    query menuItems {
+        menuItems(categoryName: "Lunch") {
+            data {
+                gid
+                internalName
+                picture
+                price
+                quantity
+                allergens {
+                    number
+                }
+            }
+        }
+    }
+`;
