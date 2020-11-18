@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 export default function MenuItem(props) {
     return (
         <Card key={props.menuItem.gid} style={{ width: "18em" }}>
-            <Card.Img variant="top" src={props.menuItem.picture} />
+            <Card.Img variant="top" src={"https://sputnik-restaur1ant.s3-eu-west-1.amazonaws.com/" + props.menuItem.picture} />
             <Card.Body className="d-flex justify-content-between">
                 <Card.Text className="">{props.menuItem.price} LEI</Card.Text>
                 <Card.Text className="">{props.menuItem.quantity}g</Card.Text>
