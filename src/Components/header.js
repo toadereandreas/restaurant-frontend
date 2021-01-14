@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import {Button} from "react-bootstrap";
+import cart from '../Images/cart.jpg';
 
 const upperButtonTextStyle = {
     fontWeight: '700',
@@ -41,14 +42,22 @@ class Header extends Component {
                                 <text style={upperButtonTextStyle}>REVIEWS</text>
                             </Button>
                         </Nav.Link>
-                        <Nav.Link href="/about" style={{ color: '#FFFFFF ' }}>
+                        <Nav.Link href="/about" style={{ color: '#FFFFFF '}}>
                             <Button variant="outline-light" style={upperButtonStyle}>
                                 <text style={upperButtonTextStyle}>ABOUT US</text>
                             </Button>
                         </Nav.Link>
+                        {/*<Nav.Link href="/cart" style={{ color: '#FFFFFF ', right: '10px' }}>*/}
+                        {/*<Button variant="outline-light" style={upperButtonStyle}>*/}
+                        {/*    <text style={upperButtonTextStyle}>BASKET</text>*/}
+                        {/*</Button>*/}
+                        {/*</Nav.Link>*/}
                     </Nav>
                 </Navbar.Collapse>
+                <Button href={"/cart"} style={{backgroundColor: "transparent", borderColor: "white"}}>
+                <img src={cart} style={{width: '50px', height: '42px'}}/></Button>
             </Navbar>
+
         )
     }
 }

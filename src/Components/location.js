@@ -23,7 +23,7 @@ class Location extends Component {
         return (
             <section style={ sectionStyle }>
                 {/*Important! Always set the container height explicitly*/}
-                <div style={{ height: '800px', width: '90%', paddingLeft: '10%' }}>
+                <div style={{ height: '800px', width: '90%', paddingLeft: '10%'}}>
                     <Header/>
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: "AIzaSyA4hbkkk_2XctdgSaZYsguR9ZVffX2d49E" }}

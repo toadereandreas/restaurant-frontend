@@ -23,7 +23,7 @@ export default function Lunch() {
             <Header />
             <CardDeck className="mx-2 my-3">
             {data.menuItems.data.map(menuItem => (
-                <MenuItem menuItem = {menuItem}></MenuItem>
+                <MenuItem menuItem = {menuItem}/>
             ))}
             </CardDeck>
         </section>

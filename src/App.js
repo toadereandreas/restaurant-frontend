@@ -14,6 +14,7 @@ import Lunch from "./Components/lunch";
 import Dinner from "./Components/dinner";
 import Coffee from "./Components/coffee";
 import Dessert from "./Components/dessert";
+import Cart from "./Components/cart";
 import Location from "./Components/location";
 import Reviews from "./Components/reviews";
 import About from "./Components/about";
@@ -22,39 +23,40 @@ import gql from 'graphql-tag';
 
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
-const client = new ApolloClient({
-    uri: "https://restaurant.playgroundev.com/graphql/",
-    cache: new InMemoryCache(),
-});
-
-client
-    .query({
-      query: gql`
-            query x{
-              dummies{
-                data{
-                  gid
-                  testName
-                  testAge
-                }
-              }
-            }
-    `
-    })
-    .then(result => console.log(result))
-    .catch(()=>console.log("dasdas"));
-
 // const client = new ApolloClient({
-//   uri: "http://restaurant-env.eba-prznaj7v.eu-west-3.elasticbeanstalk.com/graphql/",
-//   request: (operation) => {
-//     const token = localStorage.getItem('AUTH_TOKEN')
-//     operation.setContext({
-//       headers: {
-//         authorization: token ? `JWT ${token}` : '',
-//       }
+//     uri: "https://restaurant.playgroundev.com/graphql/",
+//     cache: new InMemoryCache(),
+// });
+
+// client
+//     .query({
+//       query: gql`
+//             query x{
+//               dummies{
+//                 data{
+//                   gid
+//                   testName
+//                   testAge
+//                 }
+//               }
+//             }
+//     `
 //     })
-//   }
-// })
+//     .then(result => console.log(result))
+//     .catch(()=>console.log("dasdas"));
+
+const client = new ApolloClient({
+  uri: "http://restaurant-env.eba-prznaj7v.eu-west-3.elasticbeanstalk.com/graphql/",
+  cache: new InMemoryCache(),
+  request: (operation) => {
+    const token = localStorage.getItem('AUTH_TOKEN')
+    operation.setContext({
+      headers: {
+        authorization: token ? `JWT ${token}` : '',
+      }
+    })
+  }
+})
 
 
 export default class App extends Component {
@@ -81,7 +83,7 @@ export default class App extends Component {
                         <Route exact path={"/drinks"} component={Drinks} />
                         <Route exact path={"/desserts"} component={Dessert} />
                         <Route exact path={"/coffee"} component={Coffee} />
-
+                        <Route exact path={"/cart"} component={Cart}/>
                         <Route exact path={"/location"} component={Location} />
                         <Route exact path={"/reviews"} component={Reviews} />
                         <Route exact path={"/about"} component={About} />
