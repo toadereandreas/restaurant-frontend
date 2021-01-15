@@ -37,11 +37,11 @@ class Header extends Component {
                                 <text style={upperButtonTextStyle}>LOCATION</text>
                             </Button>
                         </Nav.Link>
-                        <Nav.Link href="/reviews" style={{ color: '#FFFFFF ', marginRight: '1em' }}>
-                            <Button variant="outline-light" style={upperButtonStyle}>
-                                <text style={upperButtonTextStyle}>REVIEWS</text>
-                            </Button>
-                        </Nav.Link>
+                        {/*<Nav.Link href="/reviews" style={{ color: '#FFFFFF ', marginRight: '1em' }}>*/}
+                        {/*    <Button variant="outline-light" style={upperButtonStyle}>*/}
+                        {/*        <text style={upperButtonTextStyle}>REVIEWS</text>*/}
+                        {/*    </Button>*/}
+                        {/*</Nav.Link>*/}
                         <Nav.Link href="/about" style={{ color: '#FFFFFF '}}>
                             <Button variant="outline-light" style={upperButtonStyle}>
                                 <text style={upperButtonTextStyle}>ABOUT US</text>

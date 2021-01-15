@@ -4,6 +4,7 @@ import Header from "./header";
 import { gql } from "@apollo/client";
 import { useQuery } from "@apollo/react-hooks"
 import { CardDeck } from 'react-bootstrap';
+import { CardColumns } from 'react-bootstrap';
 import MenuItem from "./MenuItem";
 
 const sectionStyle = {
@@ -21,10 +22,15 @@ export default function Breakfast() {
     return (
         <section style={sectionStyle}>
             <Header />
-            <CardDeck className="mx-2 my-3">
-            {data.menuItems.data.map(menuItem => (
-                <MenuItem menuItem = {menuItem}></MenuItem>
-            ))}
+            {/*<CardDeck className="mx-2 my-3">*/}
+            {/*{data.menuItems.data.map(menuItem => (*/}
+            {/*    <MenuItem menuItem = {menuItem}></MenuItem>*/}
+            {/*))}*/}
+            {/*</CardDeck>*/}
+            <CardDeck>
+                {data.menuItems.data.map(menuItem => (
+                    <MenuItem menuItem = {menuItem}></MenuItem>
+                ))}
             </CardDeck>
         </section>
     )
