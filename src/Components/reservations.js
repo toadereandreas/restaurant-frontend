@@ -14,7 +14,7 @@ class Reservations extends Component {
         return (
             <section style={ sectionStyle }>
                 <Header/>
-                <div style={{ height: '800px', width: '80%', paddingLeft: '10%', backgroundColor: 'white', marginLeft: '10%', borderRadius: '15px', textAlign: 'center', margin: 'auto' }}>
+                <div style={{ top: '10%', fontSize: '30px', color: 'white',height: '800px', width: '80%', paddingLeft: '10%', backgroundColor: 'transparent', marginLeft: '10%', borderRadius: '15px', textAlign: 'center', margin: 'auto' }}>
                     Pentru rezervări ne puteţi contacta oricând la +4 0732 155 177, iar pentru evenimente speciale sau grupuri de peste 10 persoane, va rugăm să ne scrieţi un mesaj la rezervari@baracca.ro
 
                     Restaurantul funcţionează după următorul program:
