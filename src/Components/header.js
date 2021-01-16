@@ -22,6 +22,11 @@ class Header extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto ml-auto">
+                        <Nav.Link href="/menu" style={{ backgroundColor: localStorage.getItem("USER_COLOR"), marginRight: '1em' }}>
+                            <Button variant="outline-light" style={upperButtonStyle}>
+                                <text style={upperButtonTextStyle}>YOUR COLOR</text>
+                            </Button>
+                        </Nav.Link>
                         <Nav.Link href="/menu" style={{ color: '#FFFFFF ', marginRight: '1em' }}>
                             <Button variant="outline-light" style={upperButtonStyle}>
                                 <text style={upperButtonTextStyle}>MENU</text>

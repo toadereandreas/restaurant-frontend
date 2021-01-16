@@ -46,9 +46,10 @@ class Cart extends Component {
     _confirm = async (data) => {
         alert('Code confirmed!')
         console.log("WHAAAAAT");
-        localStorage.setItem("USER_COLOR", JSON.stringify(data.createOrderFrontend.order.color));
+        localStorage.setItem("USER_COLOR", data.createOrderFrontend.order.color);
         localStorage.setItem("ORDER_GID", data.createOrderFrontend.order.gid);
         localStorage.setItem("SERVING_GID", data.createOrderFrontend.order.serving.gid);
+        window.location.reload();
         console.log(localStorage.getItem("USER_COLOR"));
     };
 

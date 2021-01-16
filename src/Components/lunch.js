@@ -9,7 +9,7 @@ import MenuItem from "./MenuItem";
 const sectionStyle = {
     width: "100%",
     height: "1080px",
-    backgroundImage: `url(${Background})`
+    backgroundImage: `url(${Background})`,
 };
 
 export default function Lunch() {
@@ -21,7 +21,7 @@ export default function Lunch() {
     return (
         <section style={sectionStyle}>
             <Header />
-            <CardDeck className="mx-2 my-3">
+            <CardDeck className="mx-2 my-0">
             {data.menuItems.data.map(menuItem => (
                 <MenuItem menuItem = {menuItem}/>
             ))}
