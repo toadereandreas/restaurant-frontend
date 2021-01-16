@@ -32,6 +32,17 @@ export default function Breakfast() {
                     <MenuItem menuItem = {menuItem}></MenuItem>
                 ))}
             </CardDeck>
+            <br></br>
+            <div style={{backgroundColor: "black", width: "20%", marginLeft: "40%", textAlign: "center", color: "white", borderRadius: "10px"}}>
+                <ul style={{listStyle: "none"}}>
+                    <li>Alergeni</li>
+                    <li>1: Lapte</li>
+                    <li>2: Oua</li>
+                    <li>3: Peste</li>
+                    <li>4: Alune</li>
+                    <li>5: Soia</li>
+                </ul>
+            </div>
         </section>
     )
 }

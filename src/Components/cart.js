@@ -17,7 +17,7 @@ const sectionStyle = {
 
 const upperButtonTextStyle = {
     fontWeight: '700',
-    fontSize: '25px'
+    fontSize: '25px',
 };
 
 
@@ -91,9 +91,11 @@ class Cart extends Component {
                                 })
                             }).catch(e => console.log(e))
                         }}>
-                            <Button type="submit" style={{width: '100%'}} variant="outline-light" >
+                            { localStorage.getItem("ORDER_GID") &&
+                            <Button type="submit" style={{width: '25%', marginLeft: "40%"}} variant="outline-light">
                                 <text style={upperButtonTextStyle}>CALL WAITER</text>
-                            </Button>
+                            </Button>}
+                        }
                         </form>
                     )}
                 </Mutation>

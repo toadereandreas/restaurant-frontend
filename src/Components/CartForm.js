@@ -34,30 +34,34 @@ export default class CartForm extends Component {
                         .catch((e) => console.log(e));
                 }}
             >
-                <Form.Group controlId="servingCode">
-                    <Form.Label className="text-white">Your code:</Form.Label>
-                    <Form.Control
-                        type="text"
-                        className="w-25"
-                        name="servingCode"
-                        onChange={this.handleInput}
-                        value={servingCode}
-                        placeholder="Code"
-                        required
-                    ></Form.Control>
-                </Form.Group>
+                    <Form.Group controlId="servingCode">
+                        <Form.Label className="text-white" style={{paddingLeft:"49%", fontSize: "30px"}}>Enter code:</Form.Label>
+                        <Form.Control
+                            type="text"
+                            className="w-25"
+                            name="servingCode"
+                            onChange={this.handleInput}
+                            value={servingCode}
+                            placeholder="Code"
+                            required
+                            style={{width: "20%", marginLeft: "40%"}}
+                        />
+                    </Form.Group>
 
-                <div className="footer">
-                    <Button
-                        variant="primary"
-                        type="submit"
-                        className="button"
-                        style={{ align: "center", fontWeight: "bold" }}
-                    >
-                        SUBMIT
-                    </Button>
-                    <br />
-                </div>
+
+                    <div className="footer">
+                        <Button
+                            variant="outline-light"
+                            type="submit"
+                            className="button"
+                            style={{ align: "center", fontWeight: "bold", width: "25%", marginLeft: "40%" }}
+                        >
+                            SUBMIT
+                        </Button>
+                        <br />
+                    </div>
+                <br />
+                <br />
             </Form>
         );
     }

@@ -33,7 +33,7 @@ export default class MenuItem extends Component{
                 <Card.Img variant="top" src={"https://sputnik-restaurant.s3.amazonaws.com/" + this.props.menuItem.picture}/>
                 <Card.Body className="d-flex justify-content-between">
                     <Card.Text className="">{this.props.menuItem.price} LEI</Card.Text>
-                    <Card.Text className="">{this.props.menuItem.quantity}g</Card.Text>
+                    <Card.Text className="">{this.props.menuItem.quantity}</Card.Text>
                 </Card.Body>
                 <Card.Body>
                     <Card.Title>{this.props.menuItem.internalName}</Card.Title>
