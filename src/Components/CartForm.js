@@ -34,7 +34,6 @@ export default class CartForm extends Component {
                         .catch((e) => console.log(e));
                 }}
             >
-                <h2 className="text-center pb-3">Create your account</h2>
                 <Form.Group controlId="servingCode">
                     <Form.Label className="text-white">Your code:</Form.Label>
                     <Form.Control

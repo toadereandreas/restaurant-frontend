@@ -3,8 +3,11 @@ import { withRouter } from 'react-router';
 import Background from '../Images/menu_wallpaper.jpg';
 import Header from "./header";
 import {gql} from '@apollo/client';
-import { Mutation } from 'react-apollo';
+import { Mutation, Query } from 'react-apollo';
 import CartForm from './CartForm';
+import MenuItem from "./MenuItem";
+import {CardDeck} from "react-bootstrap";
+import {useQuery} from "@apollo/react-hooks";
 
 const sectionStyle = {
     width: "100%",
@@ -62,10 +65,37 @@ class Cart extends Component {
                         </CartForm>
                     )}
                 </Mutation>
+                {/*<Query query={GET_CART}>*/}
+                {/*    {({data, loading}) =>  {data.orderMenuItems.data.map(MenuItem => <div>{MenuItem.price}</div>)*/}
+                {/*    }}*/}
+                {/*</Query>*/}
             </section>
         );
     }
 }
+
+const GET_CART = gql`
+query getOrderMenuItems{
+orderMenuItems{
+    data{
+      menuItem{
+           gid
+           internalName
+           picture
+           price
+           quantity
+           allergens {
+               number
+           }
+      }
+      order{
+        gid
+      }
+      quantity
+    }
+  }
+}
+`
 
 const CREATE_ORDER_MUTATION = gql`
 mutation createOrderFrontend($servingCode: String!) {
