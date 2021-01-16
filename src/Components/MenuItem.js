@@ -66,10 +66,10 @@ export default class MenuItem extends Component{
                                 name="quantity"
                                 onChange={this.handleInput}
                                 value={quantity} type="tex"
-                                placeholder="quantity"
+                                placeholder="cantitate"
                         />
                         <Button type="submit" style={{width: '100%'}} variant="outline-light" >
-                            <text style={upperButtonTextStyle}>Add item</text>
+                            <text style={upperButtonTextStyle}>Adauga</text>
                         </Button>
                     </form>
                     )}

@@ -35,14 +35,14 @@ export default class CartForm extends Component {
                 }}
             >
                     <Form.Group controlId="servingCode">
-                        <Form.Label className="text-white" style={{paddingLeft:"49%", fontSize: "30px"}}>Enter code:</Form.Label>
+                        <Form.Label className="text-white" style={{paddingLeft:"49%", fontSize: "30px"}}>Introdu cod:</Form.Label>
                         <Form.Control
                             type="text"
                             className="w-25"
                             name="servingCode"
                             onChange={this.handleInput}
                             value={servingCode}
-                            placeholder="Code"
+                            placeholder="Cod"
                             required
                             style={{width: "20%", marginLeft: "40%"}}
                         />
@@ -56,7 +56,7 @@ export default class CartForm extends Component {
                             className="button"
                             style={{ align: "center", fontWeight: "bold", width: "25%", marginLeft: "40%" }}
                         >
-                            SUBMIT
+                            INTRODU
                         </Button>
                         <br />
                     </div>

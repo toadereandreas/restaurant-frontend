@@ -26,22 +26,22 @@ class Header extends Component {
                     <Nav className="mr-auto ml-auto">
                         <Nav.Link href="/menu" style={{ backgroundColor: localStorage.getItem("USER_COLOR"), marginRight: '1em', borderRadius: "10px" }}>
                             <Button variant="outline-light" style={upperButtonStyle}>
-                                <text style={upperButtonTextStyle}>YOUR COLOR</text>
+                                <text style={upperButtonTextStyle}>CULOAREA TA</text>
                             </Button>
                         </Nav.Link>
                         <Nav.Link href="/menu" style={{ color: '#FFFFFF ', marginRight: '1em' }}>
                             <Button variant="outline-light" style={upperButtonStyle}>
-                                <text style={upperButtonTextStyle}>MENU</text>
+                                <text style={upperButtonTextStyle}>MENIU</text>
                             </Button>
                         </Nav.Link>
                         <Nav.Link href="/reservations" style={{ color: '#FFFFFF ', marginRight: '1em' }}>
                             <Button variant="outline-light" style={upperButtonStyle}>
-                                <text style={upperButtonTextStyle}>RESERVATIONS</text>
+                                <text style={upperButtonTextStyle}>REZERVARI</text>
                             </Button>
                         </Nav.Link>
                         <Nav.Link href="/location" style={{ color: '#FFFFFF ', marginRight: '1em' }}>
                             <Button variant="outline-light" style={upperButtonStyle}>
-                                <text style={upperButtonTextStyle}>LOCATION</text>
+                                <text style={upperButtonTextStyle}>LOCATIE</text>
                             </Button>
                         </Nav.Link>
                         {/*<Nav.Link href="/reviews" style={{ color: '#FFFFFF ', marginRight: '1em' }}>*/}
@@ -51,7 +51,7 @@ class Header extends Component {
                         {/*</Nav.Link>*/}
                         <Nav.Link href="/about" style={{ color: '#FFFFFF '}}>
                             <Button variant="outline-light" style={upperButtonStyle}>
-                                <text style={upperButtonTextStyle}>ABOUT US</text>
+                                <text style={upperButtonTextStyle}>DESPRE NOI</text>
                             </Button>
                         </Nav.Link>
                         {/*<Nav.Link href="/cart" style={{ color: '#FFFFFF ', right: '10px' }}>*/}
