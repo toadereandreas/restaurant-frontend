@@ -6,7 +6,7 @@ import {gql} from '@apollo/client';
 import { Mutation, Query } from 'react-apollo';
 import CartForm from './CartForm';
 import MenuItem from "./MenuItem";
-import {CardDeck} from "react-bootstrap";
+import {Button, CardDeck} from "react-bootstrap";
 import {useQuery} from "@apollo/react-hooks";
 
 const sectionStyle = {
@@ -14,6 +14,12 @@ const sectionStyle = {
     height: "1080px",
     backgroundImage: `url(${Background})`
 };
+
+const upperButtonTextStyle = {
+    fontWeight: '700',
+    fontSize: '25px'
+};
+
 
 class Cart extends Component {
     state = {
@@ -41,6 +47,7 @@ class Cart extends Component {
         console.log("WHAAAAAT");
         localStorage.setItem("USER_COLOR", JSON.stringify(data.createOrderFrontend.order.color));
         localStorage.setItem("ORDER_GID", data.createOrderFrontend.order.gid);
+        localStorage.setItem("SERVING_GID", data.createOrderFrontend.order.serving.gid);
         console.log(localStorage.getItem("USER_COLOR"));
     };
 
@@ -65,6 +72,28 @@ class Cart extends Component {
                         </CartForm>
                     )}
                 </Mutation>
+                <Mutation
+                    mutation={CALL_WAITER_MUTATION}
+                    variables={{
+                        id: localStorage.getItem("SERVING_GID")
+                    }}
+                    onCompleted={console.log("Mutation completed")}
+                >
+                    {createOrderMenuItem =>  (
+                        <form onSubmit={(e) => {
+                            e.preventDefault();
+                            createOrderMenuItem().then(() => {
+                                this.setState({
+                                    quantity: '',
+                                })
+                            }).catch(e => console.log(e))
+                        }}>
+                            <Button type="submit" style={{width: '100%'}} variant="outline-light" >
+                                <text style={upperButtonTextStyle}>CALL WAITER</text>
+                            </Button>
+                        </form>
+                    )}
+                </Mutation>
                 {/*<Query query={GET_CART}>*/}
                 {/*    {({data, loading}) =>  {data.orderMenuItems.data.map(MenuItem => <div>{MenuItem.price}</div>)*/}
                 {/*    }}*/}
@@ -73,6 +102,18 @@ class Cart extends Component {
         );
     }
 }
+
+const CALL_WAITER_MUTATION = gql`
+mutation updateServing($id: ID!) {
+  updateServing(id: $id, input: {called: true}) {
+    serving {
+      name
+      code
+      called
+    }
+  }
+}
+`
 
 const GET_CART = gql`
 query getOrderMenuItems{
@@ -103,6 +144,7 @@ mutation createOrderFrontend($servingCode: String!) {
         order {
             gid
             serving {
+                gid
                 name
                 code
             }
