@@ -20,9 +20,11 @@ class Header extends Component {
             <Navbar style={{backgroundColor: "transparent", top: "0%"}}>
                 <Navbar.Brand href="/"/>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Button href={"/cart"} style={{backgroundColor: "transparent", borderColor: "white"}}>
+                    <img src={cart} style={{width: '50px', height: '42px'}}/></Button>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto ml-auto">
-                        <Nav.Link href="/menu" style={{ backgroundColor: localStorage.getItem("USER_COLOR"), marginRight: '1em' }}>
+                        <Nav.Link href="/menu" style={{ backgroundColor: localStorage.getItem("USER_COLOR"), marginRight: '1em', borderRadius: "10px" }}>
                             <Button variant="outline-light" style={upperButtonStyle}>
                                 <text style={upperButtonTextStyle}>YOUR COLOR</text>
                             </Button>
@@ -59,8 +61,6 @@ class Header extends Component {
                         {/*</Nav.Link>*/}
                     </Nav>
                 </Navbar.Collapse>
-                <Button href={"/cart"} style={{backgroundColor: "transparent", borderColor: "white"}}>
-                <img src={cart} style={{width: '50px', height: '42px'}}/></Button>
             </Navbar>
 
         )
