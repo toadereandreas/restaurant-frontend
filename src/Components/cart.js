@@ -44,6 +44,7 @@ class Cart extends Component {
     }
 
     _confirm = async (data) => {
+        alert('Code confirmed!')
         console.log("WHAAAAAT");
         localStorage.setItem("USER_COLOR", JSON.stringify(data.createOrderFrontend.order.color));
         localStorage.setItem("ORDER_GID", data.createOrderFrontend.order.gid);
@@ -63,6 +64,7 @@ class Cart extends Component {
                                 graphQLErrors.map(({ message, locations, path }) => {
                                     this.setState({ errorMessage: message });
                                     console.log(message);
+                                    alert("Invalid code!");
                                 }
                                 );
                         }

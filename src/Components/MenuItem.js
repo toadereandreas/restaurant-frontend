@@ -50,7 +50,7 @@ export default class MenuItem extends Component{
                         order: localStorage.getItem("ORDER_GID"),
                         quantity: Number(this.state.quantity)
                     }}
-                    onCompleted={console.log("Mutation completed")}
+                    onCompleted={console.log("works")}
                 >
                     {createOrderMenuItem =>  (
                     <form onSubmit={(e) => {
